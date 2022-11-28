@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:travell/imports.dart';
 
 void main() {
   runApp(const MyApp());
