@@ -27,6 +27,7 @@ class _WelcomePageState extends State<WelcomePage> {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(_images[index]),
+                fit: BoxFit.cover,
               ),
             ),
           );
