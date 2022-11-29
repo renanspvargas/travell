@@ -35,8 +35,19 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Row(
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       AppLargeText(text: "Trips"),
+                      AppText(text: "Mountain", size: 30),
+                      SizedBox(
+                        width: 250,
+                        child: AppText(
+                          text:
+                              "Mountain hikes give you a incredible sense of freedom along with endurance test",
+                          color: AppColors.textColor2,
+                          size: 14,
+                        ),
+                      )
                     ],
                   )
                 ],
