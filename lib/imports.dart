@@ -10,3 +10,4 @@ export 'package:travell/widgets/app_text.dart';
 
 // Assets
 export 'package:travell/assets/images.dart';
+export 'package:travell/assets/colors.dart';
