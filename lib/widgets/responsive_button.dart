@@ -20,6 +20,7 @@ class ResponsiveButton extends StatelessWidget {
         color: AppColors.mainColor,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(Images.buttonOne),
         ],
