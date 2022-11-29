@@ -39,6 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     children: const [
                       AppLargeText(text: "Trips"),
                       AppText(text: "Mountain", size: 30),
+                      SizedBox(height: 20),
                       SizedBox(
                         width: 250,
                         child: AppText(
@@ -47,7 +48,9 @@ class _WelcomePageState extends State<WelcomePage> {
                           color: AppColors.textColor2,
                           size: 14,
                         ),
-                      )
+                      ),
+                      SizedBox(height: 40),
+                      ResponsiveButton()
                     ],
                   )
                 ],
