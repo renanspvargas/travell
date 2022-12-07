@@ -8,6 +8,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  final List<ExploreMoreMenuItem> _exploreMoreItens = [
+    ExploreMoreMenuItem(Images.balloning, "Balloning"),
+    ExploreMoreMenuItem(Images.hiking, "Hiking"),
+    ExploreMoreMenuItem(Images.kayaking, "Kayaking"),
+    ExploreMoreMenuItem(Images.snorkling, "Snorkling")
+  ];
+
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -114,9 +121,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.only(left: 20),
               child: ListView.builder(
-                itemCount: 4,
+                itemCount: _exploreMoreItens.length,
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (BuildContext, int) {
+                itemBuilder: (_, index) {
                   return Container(
                     margin: const EdgeInsets.only(right: 30),
                     child: Column(
@@ -128,14 +135,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.white,
-                            image: const DecorationImage(
-                              image: AssetImage(Images.mountain),
+                            image: DecorationImage(
+                              image: AssetImage(_exploreMoreItens[index].image),
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                        const AppText(
-                          text: "Kayaking",
+                        AppText(
+                          text: _exploreMoreItens[index].title,
                           color: AppColors.textColor2,
                         )
                       ],
