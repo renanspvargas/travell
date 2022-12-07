@@ -14,6 +14,7 @@ export 'package:travell/pages/detail_page.dart';
 export 'package:travell/widgets/app_large_text.dart';
 export 'package:travell/widgets/app_text.dart';
 export 'package:travell/widgets/responsive_button.dart';
+export 'package:travell/widgets/app_button.dart';
 
 // Assets
 export 'package:travell/assets/images.dart';
