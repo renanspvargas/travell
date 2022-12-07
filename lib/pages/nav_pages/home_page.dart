@@ -41,12 +41,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 30),
             Container(
               margin: const EdgeInsets.only(left: 20),
               child: const AppLargeText(text: "Discover"),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
             Container(
               // margin: const EdgeInsets.only(left: 20),
               child: Align(
@@ -141,6 +141,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             ),
                           ),
                         ),
+                        const SizedBox(height: 5),
                         AppText(
                           text: _exploreMoreItens[index].title,
                           color: AppColors.textColor2,
