@@ -8,6 +8,7 @@ export 'package:travell/pages/nav_pages/home_page.dart';
 export 'package:travell/pages/nav_pages/bar_item_page.dart';
 export 'package:travell/pages/nav_pages/my_page.dart';
 export 'package:travell/pages/nav_pages/search_page.dart';
+export 'package:travell/pages/detail_page.dart';
 
 // Components
 export 'package:travell/widgets/app_large_text.dart';
