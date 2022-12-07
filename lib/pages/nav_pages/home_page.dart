@@ -7,9 +7,11 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(length: 3, vsync: this);
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,6 +39,39 @@ class _HomePageState extends State<HomePage> {
             child: const AppLargeText(text: "Discover"),
           ),
           const SizedBox(height: 30),
+          Container(
+            // margin: const EdgeInsets.only(left: 20),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: TabBar(
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.grey,
+                labelPadding: const EdgeInsets.only(left: 20, right: 20),
+                indicatorSize: TabBarIndicatorSize.label,
+                indicator:
+                    CircleTabIndicator(color: AppColors.mainColor, radius: 4),
+                isScrollable: true,
+                controller: _tabController,
+                tabs: const [
+                  Tab(text: "Places"),
+                  Tab(text: "Inspiration"),
+                  Tab(text: "Emotions"),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 300,
+            width: MediaQuery.of(context).size.width,
+            child: TabBarView(
+              controller: _tabController,
+              children: const [
+                Text("tab 0"),
+                Text("tab1"),
+                Text("tab2"),
+              ],
+            ),
+          )
         ],
       ),
     );
