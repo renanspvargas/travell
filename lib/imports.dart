@@ -20,3 +20,6 @@ export 'package:travell/assets/colors.dart';
 
 // Extensions
 export 'package:travell/extensions/circle_tab_indicator.dart';
+
+// Models
+export 'package:travell/models/explore_more_menu_item_model.dart';
