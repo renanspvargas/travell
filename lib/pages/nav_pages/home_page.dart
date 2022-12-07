@@ -48,8 +48,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 unselectedLabelColor: Colors.grey,
                 labelPadding: const EdgeInsets.only(left: 20, right: 20),
                 indicatorSize: TabBarIndicatorSize.label,
-                indicator:
-                    CircleTabIndicator(color: AppColors.mainColor, radius: 4),
+                indicator: const CircleTabIndicator(
+                  color: AppColors.mainColor,
+                  radius: 4,
+                ),
                 isScrollable: true,
                 controller: _tabController,
                 tabs: const [
@@ -65,10 +67,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             width: MediaQuery.of(context).size.width,
             child: TabBarView(
               controller: _tabController,
-              children: const [
-                Text("tab 0"),
-                Text("tab1"),
-                Text("tab2"),
+              children: [
+                Container(
+                  width: 200,
+                  height: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    image: const DecorationImage(
+                      image: AssetImage(Images.mountain),
+                    ),
+                  ),
+                ),
+                const Text("tab1"),
+                const Text("tab2"),
               ],
             ),
           )
