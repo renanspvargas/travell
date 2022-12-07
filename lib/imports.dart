@@ -3,7 +3,7 @@ export 'package:flutter/material.dart';
 
 // Pages
 export 'package:travell/pages/welcome_page.dart';
-export 'package:travell/pages/nav_pages/main_page.dart';
+export 'package:travell/pages/main_page.dart';
 export 'package:travell/pages/nav_pages/home_page.dart';
 export 'package:travell/pages/nav_pages/bar_item_page.dart';
 export 'package:travell/pages/nav_pages/my_page.dart';
