@@ -17,3 +17,6 @@ export 'package:travell/widgets/responsive_button.dart';
 // Assets
 export 'package:travell/assets/images.dart';
 export 'package:travell/assets/colors.dart';
+
+// Extensions
+export 'package:travell/extensions/circle_tab_indicator.dart';
