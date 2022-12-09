@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
     if (text != null) {
       return Text(
         text!,
-        style: const TextStyle(color: Colors.black),
+        style: TextStyle(color: color),
       );
     }
 
