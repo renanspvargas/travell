@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:travell/imports.dart';
 
 class DetailPage extends StatefulWidget {
@@ -10,7 +8,8 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
-  int _gottenStars = 4;
+  final int _gottenStars = 4;
+  int _selectedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -118,14 +117,31 @@ class _DetailPageState extends State<DetailPage> {
                       text: "Number of people in your group",
                       color: AppColors.mainTextColor,
                     ),
+                    const SizedBox(height: 10),
                     Wrap(
                       children: List.generate(5, (index) {
-                        return AppButton(
-                          color: Colors.black,
-                          backgroundColor: AppColors.buttonBackground,
-                          size: 50,
-                          borderColor: AppColors.buttonBackground,
-                          child: Text("${index + 1}"),
+                        return InkWell(
+                          onTap: () {
+                            setState(() {
+                              _selectedIndex = index;
+                            });
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: AppButton(
+                              color: _selectedIndex == index
+                                  ? Colors.white
+                                  : Colors.black,
+                              backgroundColor: _selectedIndex == index
+                                  ? Colors.black
+                                  : AppColors.buttonBackground,
+                              size: 50,
+                              borderColor: _selectedIndex == index
+                                  ? Colors.black
+                                  : AppColors.buttonBackground,
+                              text: "${index + 1}",
+                            ),
+                          ),
                         );
                       }),
                     )
