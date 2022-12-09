@@ -144,11 +144,43 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         );
                       }),
+                    ),
+                    const SizedBox(height: 20),
+                    AppLargeText(
+                      text: "Description",
+                      color: Colors.black.withOpacity(0.8),
+                      size: 20,
+                    ),
+                    const SizedBox(height: 10),
+                    const AppText(
+                      text:
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                      color: AppColors.mainTextColor,
                     )
                   ],
                 ),
               ),
-            )
+            ),
+            Positioned(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  AppButton(
+                    color: AppColors.textColor1,
+                    backgroundColor: Colors.white,
+                    size: 60,
+                    borderColor: AppColors.textColor1,
+                    icon: Icons.favorite_border,
+                  ),
+                  const SizedBox(width: 20),
+                  const ResponsiveButton(
+                    isResponsive: true,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
