@@ -1,7 +1,7 @@
 import 'package:travell/imports.dart';
 
 class ResponsiveButton extends StatelessWidget {
-  final bool? isResponsive;
+  final bool isResponsive;
   final double? width;
 
   const ResponsiveButton({
@@ -12,18 +12,30 @@ class ResponsiveButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: 60,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: AppColors.mainColor,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(Images.buttonOne),
-        ],
+    return Flexible(
+      child: Container(
+        width: width,
+        height: 60,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: AppColors.mainColor,
+        ),
+        child: Row(
+          mainAxisAlignment: isResponsive
+              ? MainAxisAlignment.spaceBetween
+              : MainAxisAlignment.center,
+          children: [
+            if (isResponsive)
+              Container(
+                margin: const EdgeInsets.only(left: 20),
+                child: const AppText(
+                  text: "Book Trip Now",
+                  color: Colors.white,
+                ),
+              ),
+            Image.asset(Images.buttonOne),
+          ],
+        ),
       ),
     );
   }
