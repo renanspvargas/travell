@@ -19,6 +19,9 @@ export 'package:travell/widgets/app_text.dart';
 export 'package:travell/widgets/responsive_button.dart';
 export 'package:travell/widgets/app_button.dart';
 
+// Services
+export 'package:travell/services/data_services.dart';
+
 // Assets
 export 'package:travell/assets/images.dart';
 export 'package:travell/assets/colors.dart';
