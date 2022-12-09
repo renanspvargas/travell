@@ -28,6 +28,7 @@ export 'package:travell/extensions/circle_tab_indicator.dart';
 
 // Models
 export 'package:travell/models/explore_more_menu_item_model.dart';
+export 'package:travell/models/data_model.dart';
 
 // Cubit States
 export 'package:travell/cubit/app_cubit_states.dart';
