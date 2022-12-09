@@ -1,5 +1,3 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:travell/cubit/app_cubits.dart';
 import 'package:travell/imports.dart';
 
 class AppCubitLogics extends StatefulWidget {
@@ -17,6 +15,11 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
         builder: (context, state) {
           if (state is WelcomeState) {
             return const WelcomePage();
+          }
+          if (state is LoadingState) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           }
           return Container();
         },
