@@ -1,6 +1,9 @@
 // Flutter
 export 'package:flutter/material.dart';
 
+// Dart
+export 'dart:convert';
+
 // Pages
 export 'package:travell/pages/welcome_page.dart';
 export 'package:travell/pages/main_page.dart';
