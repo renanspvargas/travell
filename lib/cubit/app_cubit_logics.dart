@@ -16,6 +16,11 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
           if (state is WelcomeState) {
             return const WelcomePage();
           }
+
+          if (state is LoadedState) {
+            return const MainPage();
+          }
+
           if (state is LoadingState) {
             return const Center(
               child: CircularProgressIndicator(),
