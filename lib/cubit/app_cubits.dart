@@ -1,9 +1,11 @@
 import 'package:travell/imports.dart';
 
 class AppCubits extends Cubit<CubitStates> {
-  AppCubits() : super(InitialState()) {
+  AppCubits({required this.data}) : super(InitialState()) {
     emit(WelcomeState());
   }
+
+  final DataServices data;
 
   void getData() {
     try {

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider<AppCubits>(
-        create: ((context) => AppCubits()),
+        create: ((context) => AppCubits(data: DataServices())),
         child: const AppCubitLogics(),
       ),
     );
