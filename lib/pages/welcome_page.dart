@@ -37,11 +37,11 @@ class _WelcomePageState extends State<WelcomePage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      AppLargeText(text: "Trips"),
-                      AppText(text: "Mountain", size: 30),
-                      SizedBox(height: 20),
-                      SizedBox(
+                    children: [
+                      const AppLargeText(text: "Trips"),
+                      const AppText(text: "Mountain", size: 30),
+                      const SizedBox(height: 20),
+                      const SizedBox(
                         width: 250,
                         child: AppText(
                           text:
@@ -50,9 +50,14 @@ class _WelcomePageState extends State<WelcomePage> {
                           size: 14,
                         ),
                       ),
-                      SizedBox(height: 40),
-                      ResponsiveButton(
-                        width: 120,
+                      const SizedBox(height: 40),
+                      GestureDetector(
+                        onTap: () {
+                          BlocProvider.of<AppCubits>(context).getData();
+                        },
+                        child: const ResponsiveButton(
+                          width: 120,
+                        ),
                       )
                     ],
                   ),
