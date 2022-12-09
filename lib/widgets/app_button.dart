@@ -5,8 +5,8 @@ class AppButton extends StatelessWidget {
   final Color backgroundColor;
   final double size;
   final Color borderColor;
-  late IconData? icon;
-  late String? text;
+  IconData? icon;
+  String? text;
 
   AppButton({
     super.key,
@@ -16,8 +16,8 @@ class AppButton extends StatelessWidget {
     required this.borderColor,
     this.icon,
     this.text,
-  })  : assert(icon != null && text != null, "You must provide icon OR text"),
-        assert(icon == null && text == null,
+  })  : assert(icon != null || text != null, "You must provide icon OR text"),
+        assert(icon == null || text == null,
             "Cannot provide both a icon and a text at the same time");
 
   Widget getCenteredWidget() {
@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
     if (text != null) {
       return Text(
         text!,
-        style: TextStyle(color: color),
+        style: const TextStyle(color: Colors.black),
       );
     }
 
