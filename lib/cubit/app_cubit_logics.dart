@@ -26,6 +26,11 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
               child: CircularProgressIndicator(),
             );
           }
+
+          if (state is DetailState) {
+            return const DetailPage();
+          }
+
           return Container();
         },
       ),

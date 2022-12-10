@@ -15,4 +15,8 @@ class AppCubits extends Cubit<CubitStates> {
       emit(LoadedState(places));
     } catch (e) {}
   }
+
+  void getDetails(DataModel data) {
+    emit(DetailState(data));
+  }
 }
