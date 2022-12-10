@@ -20,7 +20,7 @@ class DataModel {
   factory DataModel.fromJson(Map<String, dynamic> json) {
     return DataModel(
       name: json['name'],
-      img: json['img'],
+      img: 'http://mark.bslmeiyu.com/uploads/${json['img']}',
       description: json['description'],
       location: json['location'],
       price: json['price'],
